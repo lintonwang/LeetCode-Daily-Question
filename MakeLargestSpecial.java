@@ -28,4 +28,9 @@ public  class MakeLargestSpecial {
         }
         return sb.toString();
     }
+
+    public static void main(String[] args) {
+        MakeLargestSpecial makeLargestSpecial = new MakeLargestSpecial();
+        makeLargestSpecial.makeLargestSpecial("11011000");
+    }
 }

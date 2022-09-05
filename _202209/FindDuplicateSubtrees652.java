@@ -22,39 +22,15 @@ public class FindDuplicateSubtrees652 {
         }
     }
 
-    class Pair<K, V> {
-        TreeNode key;
-        Integer value;
-
-        public Pair(K node, V i) {
-            key = (TreeNode) node;
-            value = (Integer) i;
-        }
-
-        public TreeNode getKey() {
-            return key;
-        }
-
-        public void setKey(TreeNode key) {
-            this.key = key;
-        }
-
-        public Integer getValue() {
-            return value;
-        }
-
-        public void setValue(Integer value) {
-            this.value = value;
-        }
-    }
-
     Set<TreeNode> ans;
-    Map<String, Pair<TreeNode, Integer>> seen;
+    Map<String, TreeNode> hash;
+    Map<String, Integer> nodeIdx;
     int idx;
 
     public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
         ans = new HashSet<>();
-        seen = new HashMap<>();
+        hash = new HashMap<>();
+        nodeIdx = new HashMap<>();
         idx = 0;
         findDuplicateSubtreesDfs(root);
         return new ArrayList<>(ans);
@@ -62,14 +38,16 @@ public class FindDuplicateSubtrees652 {
 
     int findDuplicateSubtreesDfs(TreeNode node) {
         if (node == null) return 0;
+        //对每一种结构形成独特的hash值 [root.val,left.idx,right.idx]
         int[] val = {node.val, findDuplicateSubtreesDfs(node.left), findDuplicateSubtreesDfs(node.right)};
         String valString = Arrays.toString(val);
-        if (seen.containsKey(valString)) {
-            Pair<TreeNode,Integer> pair = seen.get(valString);
-            ans.add(pair.getKey());
-            return pair.getValue();
+
+        if (hash.containsKey(valString)) {
+            ans.add(hash.get(valString));
+            return nodeIdx.get(valString);
         } else {
-            seen.put(valString, new Pair<TreeNode, Integer>(node, ++idx));
+            hash.put(valString, node);
+            nodeIdx.put(valString, ++idx);
             return idx;
         }
     }

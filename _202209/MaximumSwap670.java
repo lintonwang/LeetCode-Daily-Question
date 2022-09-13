@@ -11,7 +11,7 @@ public class MaximumSwap670 {
             if (chars[i] > chars[maxIdx]) {
                 maxIdx = i;
             } else if (chars[i] < chars[maxIdx]) {
-                //保存替换的位置对
+                //保存替换的位置对,因为maxIdx可能会跑到preIdx前面去，所以需要暂存一个maxIdx
                 preIdx = i;
                 maxStash = maxIdx;
             }

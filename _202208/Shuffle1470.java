@@ -1,4 +1,4 @@
-package _202208.src;
+package _202208;
 
 public class Shuffle1470 {
     public int[] shuffle(int[] nums, int n) {

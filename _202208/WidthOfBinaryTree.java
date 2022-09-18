@@ -1,4 +1,4 @@
-package _202208.src;
+package _202208;
 
 import java.util.HashMap;
 import java.util.Map;

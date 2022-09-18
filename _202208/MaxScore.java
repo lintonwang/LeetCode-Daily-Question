@@ -1,3 +1,5 @@
+package _202208;
+
 public class MaxScore {
     public int maxScore(String s) {
         int maxScore = 0;

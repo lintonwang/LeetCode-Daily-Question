@@ -1,3 +1,5 @@
+package _202208;
+
 public class CanBeEqual {
     public boolean canBeEqual(int[] target, int[] arr) {
         int[] count1 = new int[1001];

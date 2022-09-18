@@ -1,4 +1,4 @@
-package _202208.src;
+package _202208;
 
 public class IsPrefixOfWord {
     public int isPrefixOfWord(String sentence, String searchWord) {

@@ -16,7 +16,7 @@ public class CanPartitionKSubsets698 {
 
     boolean dfs(int[] nums, boolean[] used, int begin, int currentGroup, int groupSum) {
         if (currentGroup == this.k) return true;
-        if (groupSum == this.partSum) dfs(nums, used, begin + 1, currentGroup + 1, 0);
+        if (groupSum == this.partSum) return dfs(nums, used, begin + 1, currentGroup + 1, 0);
         for (int i = begin; i < nums.length; i++) {
             if (used[i] || nums[i] + groupSum > this.partSum) continue;
             used[i] = true;

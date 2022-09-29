@@ -1,4 +1,6 @@
-public class PreimageSizeFZF {
+package _202208;
+
+public class PreimageSizeFZF793 {
     public int preimageSizeFZF(int k) {
         return binarySearch(k + 1) - binarySearch(k);
     }
@@ -27,7 +29,7 @@ public class PreimageSizeFZF {
     }
 
     public static void main(String[] args) {
-        PreimageSizeFZF instance = new PreimageSizeFZF();
+        PreimageSizeFZF793 instance = new PreimageSizeFZF793();
         instance.preimageSizeFZF(0);
     }
 }

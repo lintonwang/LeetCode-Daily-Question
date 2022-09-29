@@ -1,4 +1,6 @@
-public class MaxProduct {
+package _202208;
+
+public class MaxProduct1464 {
     public int maxProduct(int[] nums) {
         int max1 = 1, max2 = 1;
         int min1 = 1, min2 = 1;

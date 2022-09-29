@@ -1,3 +1,5 @@
+package _202209;
+
 public class CheckPermutation01_02 {
     public boolean CheckPermutation(String s1, String s2) {
         int[] char1 = new int[26];

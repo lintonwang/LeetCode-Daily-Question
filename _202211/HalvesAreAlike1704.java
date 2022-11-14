@@ -1,4 +1,4 @@
-package _202210;
+package _202211;
 
 public class HalvesAreAlike1704 {
     public boolean halvesAreAlike(String s) {

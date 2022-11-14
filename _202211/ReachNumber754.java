@@ -1,4 +1,4 @@
-package _202210;
+package _202211;
 
 public class ReachNumber754 {
     public int reachNumber(int target) {

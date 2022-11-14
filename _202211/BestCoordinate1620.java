@@ -1,4 +1,4 @@
-package _202210;
+package _202211;
 
 public class BestCoordinate1620 {
     public int[] bestCoordinate(int[][] towers, int radius) {

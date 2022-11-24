@@ -8,6 +8,7 @@ public class NthMagicalNumber878 {
         long right = left * n;
         int c = lcm(a, b);
         while (left < right) {
+            //if left = mid,mid must = (left+right+1)/2;
             long mid = (left + right) / 2;
             long val = mid / a + mid / b - mid / c;
             if (val >= n) {

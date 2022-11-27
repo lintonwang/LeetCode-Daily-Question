@@ -31,8 +31,8 @@ public class ReachableNodes882 {
         }
         for (int[] edge : edges) {
             int u = edge[0], v = edge[1], count = edge[2];
-            ans += Math.min(count, indexMap.getOrDefault(uvToIndex(u, v, n), 0) + indexMap.getOrDefault(uvToIndex(v,
-                    u, n), 0));
+            ans += Math.min(count, indexMap.getOrDefault(uvToIndex(u, v, n), 0) +
+                    indexMap.getOrDefault(uvToIndex(v, u, n), 0));
         }
         return ans;
     }

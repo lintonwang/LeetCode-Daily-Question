@@ -13,6 +13,7 @@ public class ClosestCost1774 {
                 //if all of baseCosts is more than target,res must return min cost
             else res = Math.min(res, base);
         }
+        //循环顺序需要最里层处理dp[i]，然后靠外层top更新，如果最外层是dp，就只会按照最初base来进行更新，而且只会按照top更新一次
         for (int top : toppingCosts) {
             for (int i = 0; i < 2; i++) {
                 //如果递增的话，在一轮循环里，可能会多次使用配料。比如循环之前dp[10]=true,
@@ -29,5 +30,10 @@ public class ClosestCost1774 {
             if (dp[target - i]) return target - i;
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        ClosestCost1774 solution = new ClosestCost1774();
+        solution.closestCost(new int[]{3, 10}, new int[]{2, 5}, 9);
     }
 }
